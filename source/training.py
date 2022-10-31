@@ -43,8 +43,8 @@ estimator = PyTorch(
     instance_type="ml.c5.2xlarge",
     py_version="py3",
     use_spot_instances=True,  # Use a spot instance
-    # max_run=300,  # Max training time
-    # max_wait=600,  # Max training time + spot waiting time
+    max_run=3600,  # Max training time
+    max_wait=3600,  # Max training time + spot waiting time
     hyperparameters={"epochs": 20, "backend": "gloo"},
 )
 
